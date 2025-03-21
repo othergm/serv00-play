@@ -94,7 +94,7 @@ function scheduleScript() {
   const cmd = `cd ${serv00PlayDir} && bash ${keepaliveScript} `
 
   const executeScript = () => {
-    const interval = (parseInt(config.interval, 10) || 5) * 60000 // 默认5分钟
+    const interval = (parseInt(config.interval, 10) || 1440) * 60000 // 默认5分钟
 
     logError(`定时执行脚本: ${cmd}, 间隔: ${interval}ms`)
     exec(cmd, (error, stdout, stderr) => {
